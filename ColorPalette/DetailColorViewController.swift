@@ -22,18 +22,28 @@ class DetailColorViewController: UIViewController {
     }
     
     private func prepareAnimation() {
-        imgViewCenterX.constant = view.bounds.width
-        nameCenterX.constant = view.bounds.width
+//        imgViewCenterX.constant = view.bounds.width
+//        nameCenterX.constant = view.bounds.width
+        colorName.transform = CGAffineTransform(translationX: view.bounds.width, y: 0).scaledBy(x: 3, y: 3).rotated(by: 180)
+        
+        colorName.alpha = 0
     }
     
     private func showAnimation() {
-        imgViewCenterX.constant = 0
-        nameCenterX.constant = 0
+//        imgViewCenterX.constant = 0
+//        nameCenterX.constant = 0
+//
+//        UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
+//            self.view.layoutIfNeeded()
+//        }, completion: nil)
+//
+//        UIView.transition(with: imgView, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
         
-        UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
-            self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {
+            self.colorName.transform = CGAffineTransform.identity
+            self.colorName.alpha = 1
         }, completion: nil)
-        
+       
         UIView.transition(with: imgView, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
     }
     
