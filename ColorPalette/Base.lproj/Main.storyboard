@@ -135,6 +135,8 @@
                     <connections>
                         <outlet property="colorName" destination="i22-Um-5yz" id="zjZ-Vz-q2a"/>
                         <outlet property="imgView" destination="YGl-2x-ip6" id="0bZ-Z5-IbJ"/>
+                        <outlet property="imgViewCenterX" destination="p27-FV-7qv" id="C92-Fv-LrK"/>
+                        <outlet property="nameCenterX" destination="El7-zS-Q4E" id="Zxm-ho-bG1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zra-40-A0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
